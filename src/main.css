@@ -1,6 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-main-1: light-dark(#fff, #000);
-  --color-main-2: light-dark(#15ff00, #c53131);
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-error: light-dark(var(--color-red-500), var(--color-red-400));
+
+  --color-accent-1: light-dark(#0551b5, #0551b5);
+  --color-accent-1-hover: light-dark(#1161ca, #3b82f6);
+  --color-accent-2: light-dark(#097ff5, #097ff5);
+  /* --color-accent-3-hover: light-dark(#73a5ff, #73a5ff); */
+  --color-accent-3: light-dark(#0070e0, #0070e0);
+  --color-accent-3-hover: light-dark(#73a5ff, #73a5ff);
+
+  --color-fg-1: light-dark(#000, var(--color-neutral-200));
+  --color-fg-2: light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --color-fg-3: light-dark(var(--color-neutral-400), var(--color-neutral-500));
+  --color-on-accent: light-dark(#fff, var(--color-neutral-200));
+  --color-divider: light-dark(
+    var(--color-neutral-300),
+    var(--color-neutral-800)
+  );
+
+  --color-main-1: light-dark(#fff, #121212);
+  --color-surface: light-dark(#fff, #1e1e1e88);
+  --color-main-2: light-dark(#ebedee, var(--color-neutral-800));
+  --color-main-3: light-dark(#999999, var(--color-neutral-700));
+  --color-main-4: light-dark(#6c7378, var(--color-neutral-600));
 }
