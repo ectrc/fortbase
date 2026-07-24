@@ -36,6 +36,9 @@
     var(--color-neutral-800)
   );
 
+  --color-field-border: light-dark(#999999, transparent);
+  --color-field-bg: light-dark(transparent, #232323);
+
   --color-main-1: light-dark(#fff, #121212);
   --color-surface: light-dark(#fff, #1e1e1e88);
   --color-main-2: light-dark(#ebedee, var(--color-neutral-800));

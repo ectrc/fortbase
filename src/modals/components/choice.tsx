@@ -45,10 +45,10 @@ const Choice = <T extends string>({
           return (
             <label
               key={option.value}
-              className={`flex flex-row items-center gap-3 w-full p-4 rounded-sm cursor-pointer border has-checked:outline-2 has-focus-visible:outline-2 ${
+              className={`flex flex-row items-center gap-3 w-full p-3.5 rounded-md cursor-pointer border has-checked:outline-2 has-focus-visible:outline-2 ${
                 error
                   ? "border-error outline-error"
-                  : "border-main-3 outline-accent-2 has-checked:border-accent-2"
+                  : "border-field-border bg-field-bg outline-accent-2 has-checked:border-accent-2"
               } ${optionDisabled ? "opacity-60 pointer-events-none" : ""}`}
             >
               <input

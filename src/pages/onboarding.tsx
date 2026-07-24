@@ -80,6 +80,51 @@ const VerifyStep = ({ onNext }: StepProps) => {
   );
 };
 
+const CreatePassword = ({ onNext }: StepProps) => {
+  return (
+    <Modal>
+      <Modal.Header
+        title="Create Password"
+        subtitle="This is to keep your account secure."
+      />
+
+      <Modal.Input
+        label="Password"
+        name="password"
+        type="password"
+        autoComplete="new-password"
+      />
+
+      <Modal.Button onClick={onNext}>Next</Modal.Button>
+    </Modal>
+  );
+};
+
+const PersonalInformation = ({ onNext }: StepProps) => {
+  return (
+    <Modal>
+      <Modal.Header
+        title="Create Password"
+        subtitle="This is to keep your account secure."
+      />
+
+      <Modal.Input label="Legal First Name" />
+      <Modal.Input label="Legal Last Name" />
+      <Modal.Input label="Country" />
+
+      <span className="text-fg-3 text-sm">
+        By creating a Money account, you confirm you're at least 18 years old
+        and agree to our{" "}
+        <a className="text-accent-3 hover:text-accent-3-hover cursor-pointer hover:underline">
+          User Agreement
+        </a>
+      </span>
+
+      <Modal.Button onClick={onNext}>Next</Modal.Button>
+    </Modal>
+  );
+};
+
 const DoneStep = ({ onNext }: StepProps) => {
   return (
     <Modal>
@@ -90,7 +135,14 @@ const DoneStep = ({ onNext }: StepProps) => {
   );
 };
 
-const steps = [EmailStep, ProfileStep, VerifyStep, DoneStep];
+const steps = [
+  EmailStep,
+  ProfileStep,
+  VerifyStep,
+  CreatePassword,
+  PersonalInformation,
+  DoneStep,
+];
 
 const Onboarding = () => {
   const [step, setStep] = useState(0);

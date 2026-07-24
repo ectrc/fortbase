@@ -69,12 +69,12 @@ const CodeInput = ({
             return (
               <div
                 key={i}
-                className={`flex-1 h-16 flex items-center justify-center text-xl font-medium text-fg-1 rounded-sm border ${
+                className={`flex-1 h-16 flex items-center justify-center text-xl font-medium text-fg-1 rounded-sm border bg-field-bg ${
                   error
                     ? "border-error outline-2 outline-error -outline-offset-1"
                     : active
                       ? "border-accent-2 outline-2 outline-accent-2 -outline-offset-1"
-                      : "border-main-3"
+                      : "border-field-border"
                 }`}
               >
                 {value[i] ?? ""}

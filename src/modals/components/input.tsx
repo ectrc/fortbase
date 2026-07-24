@@ -19,7 +19,7 @@ const Input = ({ label, grammar, error, ...rest }: InputProps) => {
         className={`relative block w-full cursor-text border px-2.5 pt-5 pb-1.5 rounded-md has-[input:focus]:outline-2 outline-offset-2 has-[input:disabled]:opacity-60 has-[input:disabled]:cursor-not-allowed ${
           error
             ? "border-error outline-error border-2"
-            : "border-main-3 outline-accent-2"
+            : "border-field-border bg-field-bg outline-accent-2"
         }`}
       >
         <input

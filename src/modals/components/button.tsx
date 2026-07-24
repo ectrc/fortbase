@@ -7,7 +7,7 @@ type ButtonProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-accent-1 text-on-accent",
-  secondary: "border-main-3 border-2 text-fg-1",
+  secondary: "border-field-border bg-field-bg border-2 text-fg-1",
 };
 
 const hoverClasses: Record<ButtonVariant, string> = {
