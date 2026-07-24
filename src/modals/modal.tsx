@@ -3,6 +3,7 @@ import Button from "./components/button";
 import Header from "./components/header";
 import CodeInput from "./components/code_input";
 import Choice from "./components/choice";
+import Dropdown from "./components/dropdown";
 
 type ModalSize = "sm" | "md" | "lg";
 
@@ -31,6 +32,7 @@ const Modal = Object.assign(ModalRoot, {
   Header,
   CodeInput,
   Choice,
+  Dropdown,
 });
 
 export default Modal;

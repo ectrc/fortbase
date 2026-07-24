@@ -100,7 +100,28 @@ const CreatePassword = ({ onNext }: StepProps) => {
   );
 };
 
+const countries = [
+  { value: "au", title: "Australia", sectionStart: <span>🇦🇺</span> },
+  { value: "ca", title: "Canada", sectionStart: <span>🇨🇦</span> },
+  { value: "dk", title: "Denmark", sectionStart: <span>🇩🇰</span> },
+  { value: "fr", title: "France", sectionStart: <span>🇫🇷</span> },
+  { value: "de", title: "Germany", sectionStart: <span>🇩🇪</span> },
+  { value: "jp", title: "Japan", sectionStart: <span>🇯🇵</span> },
+  { value: "nl", title: "Netherlands", sectionStart: <span>🇳🇱</span> },
+  { value: "es", title: "Spain", sectionStart: <span>🇪🇸</span> },
+  { value: "se", title: "Sweden", sectionStart: <span>🇸🇪</span> },
+  { value: "gb", title: "United Kingdom", sectionStart: <span>🇬🇧</span> },
+  {
+    value: "us",
+    title: "United States",
+    description: "USD accounts only",
+    sectionStart: <span>🇺🇸</span>,
+  },
+];
+
 const PersonalInformation = ({ onNext }: StepProps) => {
+  const [country, setCountry] = useState<string>();
+
   return (
     <Modal>
       <Modal.Header
@@ -110,7 +131,14 @@ const PersonalInformation = ({ onNext }: StepProps) => {
 
       <Modal.Input label="Legal First Name" />
       <Modal.Input label="Legal Last Name" />
-      <Modal.Input label="Country" />
+      <Modal.Dropdown
+        label="Country"
+        name="country"
+        options={countries}
+        value={country}
+        onChange={setCountry}
+        searchable
+      />
 
       <span className="text-fg-3 text-sm">
         By creating a Money account, you confirm you're at least 18 years old
