@@ -16,7 +16,7 @@ const Input = ({ label, grammar, error, ...rest }: InputProps) => {
   return (
     <div className="w-full">
       <label
-        className={`relative block w-full cursor-text border px-2 pt-5 pb-1.5 rounded-sm has-[input:focus]:outline-2 outline-offset-2 has-[input:disabled]:opacity-60 has-[input:disabled]:cursor-not-allowed ${
+        className={`relative block w-full cursor-text border px-2.5 pt-5 pb-1.5 rounded-md has-[input:focus]:outline-2 outline-offset-2 has-[input:disabled]:opacity-60 has-[input:disabled]:cursor-not-allowed ${
           error
             ? "border-error outline-error border-2"
             : "border-main-3 outline-accent-2"
@@ -31,7 +31,7 @@ const Input = ({ label, grammar, error, ...rest }: InputProps) => {
           aria-describedby={error ? error_id : undefined}
         />
         <span
-          className={`absolute left-2 top-2 text-xs pointer-events-none transition-all peer-placeholder-shown:peer-not-focus:top-1/2 peer-placeholder-shown:peer-not-focus:-translate-y-1/2 peer-placeholder-shown:peer-not-focus:text-base ${
+          className={`absolute left-2.5 top-2 text-xs pointer-events-none transition-all peer-placeholder-shown:peer-not-focus:top-1/2 peer-placeholder-shown:peer-not-focus:-translate-y-1/2 peer-placeholder-shown:peer-not-focus:text-base ${
             error ? "text-error font-medium" : "text-fg-3"
           }`}
         >

@@ -1,6 +1,8 @@
 import Input from "./components/input";
 import Button from "./components/button";
 import Header from "./components/header";
+import CodeInput from "./components/code_input";
+import Choice from "./components/choice";
 
 type ModalSize = "sm" | "md" | "lg";
 
@@ -23,6 +25,12 @@ const ModalRoot = ({ size = "md", ...rest }: ModalProps) => {
   );
 };
 
-const Modal = Object.assign(ModalRoot, { Input, Button, Header });
+const Modal = Object.assign(ModalRoot, {
+  Input,
+  Button,
+  Header,
+  CodeInput,
+  Choice,
+});
 
 export default Modal;
