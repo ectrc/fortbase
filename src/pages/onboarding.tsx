@@ -9,7 +9,7 @@ const EmailStep = ({ onNext }: StepProps) => {
   return (
     <Modal>
       <Modal.Header
-        title="Money Onboarding"
+        title="Account Setup"
         subtitle="Please answer every step carefully."
       />
 
@@ -21,42 +21,6 @@ const EmailStep = ({ onNext }: StepProps) => {
       />
 
       <Modal.Button onClick={onNext}>Next</Modal.Button>
-    </Modal>
-  );
-};
-
-const ProfileStep = ({ onNext }: StepProps) => {
-  const [accountType, setAccountType] = useState<"personal" | "business">();
-
-  return (
-    <Modal>
-      <Modal.Header
-        title="Account Type"
-        subtitle="How are you going to be using Money?"
-      />
-
-      <Modal.Choice
-        name="account-type"
-        value={accountType}
-        onChange={setAccountType}
-        options={[
-          {
-            value: "personal",
-            label: "Personal",
-            description: "Send, spend and manage your money.",
-          },
-          {
-            value: "business",
-            label: "Business",
-            description:
-              "Accept international payments with our integrated tooling.",
-          },
-        ]}
-      />
-
-      <Modal.Button onClick={onNext} disabled={!accountType}>
-        Next
-      </Modal.Button>
     </Modal>
   );
 };
@@ -100,21 +64,55 @@ const CreatePassword = ({ onNext }: StepProps) => {
   );
 };
 
+const ProfileStep = ({ onNext }: StepProps) => {
+  const [accountType, setAccountType] = useState<"personal" | "community">();
+
+  return (
+    <Modal>
+      <Modal.Header
+        title="Create an Organisation"
+        subtitle="How many end-users will be using your base."
+      />
+
+      <Modal.Choice
+        name="scale"
+        value={accountType}
+        onChange={setAccountType}
+        options={[
+          {
+            value: "personal",
+            label: "Individual",
+            description: "For friends or just to try out a game.",
+          },
+          {
+            value: "community",
+            label: "Commmunity",
+            description: "Scale for large servers with our integrated tooling.",
+          },
+        ]}
+      />
+
+      <Modal.Button onClick={onNext} disabled={!accountType}>
+        Next
+      </Modal.Button>
+    </Modal>
+  );
+};
+
 const countries = [
-  { value: "au", title: "Australia", sectionStart: <span>🇦🇺</span> },
-  { value: "ca", title: "Canada", sectionStart: <span>🇨🇦</span> },
-  { value: "dk", title: "Denmark", sectionStart: <span>🇩🇰</span> },
-  { value: "fr", title: "France", sectionStart: <span>🇫🇷</span> },
-  { value: "de", title: "Germany", sectionStart: <span>🇩🇪</span> },
-  { value: "jp", title: "Japan", sectionStart: <span>🇯🇵</span> },
-  { value: "nl", title: "Netherlands", sectionStart: <span>🇳🇱</span> },
-  { value: "es", title: "Spain", sectionStart: <span>🇪🇸</span> },
-  { value: "se", title: "Sweden", sectionStart: <span>🇸🇪</span> },
+  // { value: "au", title: "Australia", sectionStart: <span>🇦🇺</span> },
+  // { value: "ca", title: "Canada", sectionStart: <span>🇨🇦</span> },
+  // { value: "dk", title: "Denmark", sectionStart: <span>🇩🇰</span> },
+  // { value: "fr", title: "France", sectionStart: <span>🇫🇷</span> },
+  // { value: "de", title: "Germany", sectionStart: <span>🇩🇪</span> },
+  // { value: "jp", title: "Japan", sectionStart: <span>🇯🇵</span> },
+  // { value: "nl", title: "Netherlands", sectionStart: <span>🇳🇱</span> },
+  // { value: "es", title: "Spain", sectionStart: <span>🇪🇸</span> },
+  // { value: "se", title: "Sweden", sectionStart: <span>🇸🇪</span> },
   { value: "gb", title: "United Kingdom", sectionStart: <span>🇬🇧</span> },
   {
     value: "us",
     title: "United States",
-    description: "USD accounts only",
     sectionStart: <span>🇺🇸</span>,
   },
 ];
@@ -125,15 +123,15 @@ const PersonalInformation = ({ onNext }: StepProps) => {
   return (
     <Modal>
       <Modal.Header
-        title="Create Password"
-        subtitle="This is to keep your account secure."
+        title="Create an Organisation"
+        subtitle="Name and choose a region."
       />
 
-      <Modal.Input label="Legal First Name" />
-      <Modal.Input label="Legal Last Name" />
+      <Modal.Input label="Name" name="name" type="text" />
+
       <Modal.Dropdown
-        label="Country"
-        name="country"
+        label="Server Region"
+        name="region"
         options={countries}
         value={country}
         onChange={setCountry}
@@ -156,18 +154,21 @@ const PersonalInformation = ({ onNext }: StepProps) => {
 const DoneStep = ({ onNext }: StepProps) => {
   return (
     <Modal>
-      <Modal.Header title="All done" subtitle="Your account is ready to use." />
+      <Modal.Header
+        title="Welcome to Fortbase"
+        subtitle="Your account is ready to use."
+      />
 
-      <Modal.Button onClick={onNext}>Start Over</Modal.Button>
+      <Modal.Button onClick={onNext}>Continue</Modal.Button>
     </Modal>
   );
 };
 
 const steps = [
   EmailStep,
-  ProfileStep,
   VerifyStep,
   CreatePassword,
+  ProfileStep,
   PersonalInformation,
   DoneStep,
 ];

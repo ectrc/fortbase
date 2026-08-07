@@ -12,8 +12,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 
 const hoverClasses: Record<ButtonVariant, string> = {
   primary: "cursor-pointer hover:bg-accent-1-hover",
-  secondary:
-    "cursor-pointer hover:border-accent-1-hover hover:text-accent-1-hover",
+  secondary: "cursor-pointer hover:border-fg-2-hover hover:text-accent-1-hover",
 };
 
 const Button = ({

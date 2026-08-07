@@ -103,7 +103,9 @@ export const LoginModal = () => {
 const TestPage = () => {
   return (
     <div className="bg-main-1 w-full h-full flex items-center justify-center">
-      <Onboarding />
+      {/* <Onboarding /> */}
+
+      <LoginModal />
     </div>
   );
 };
