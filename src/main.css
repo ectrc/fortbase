@@ -49,10 +49,12 @@
   );
 
   --color-field-border: light-dark(#999999, transparent);
-  --color-field-bg: light-dark(transparent, #232323);
+  --color-field-bg: light-dark(#efefef, #232323);
+
+  --color-surface: light-dark(transparent, #1e1e1e88);
+  --color-surface-1: light-dark(#f4f4f4, #1e1e1e36);
 
   --color-main-1: light-dark(#fff, #121212);
-  --color-surface: light-dark(#fff, #1e1e1e88);
   --color-main-2: light-dark(#ebedee, var(--color-neutral-800));
   --color-main-3: light-dark(#999999, var(--color-neutral-700));
   --color-main-4: light-dark(#6c7378, var(--color-neutral-600));

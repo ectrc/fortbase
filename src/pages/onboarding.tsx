@@ -82,7 +82,7 @@ const ProfileStep = ({ onNext }: StepProps) => {
           {
             value: "personal",
             label: "Individual",
-            description: "For friends or just to try out a game.",
+            description: "For a small group of friends to play together.",
           },
           {
             value: "community",
@@ -139,7 +139,7 @@ const PersonalInformation = ({ onNext }: StepProps) => {
       />
 
       <span className="text-fg-3 text-sm">
-        By creating a Money account, you confirm you're at least 18 years old
+        By creating a Fortbase account, you confirm you're at least 18 years old
         and agree to our{" "}
         <a className="text-accent-3 hover:text-accent-3-hover cursor-pointer hover:underline">
           User Agreement

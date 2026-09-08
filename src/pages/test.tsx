@@ -51,8 +51,8 @@ export const LoginModal = () => {
   return (
     <Modal>
       <Modal.Header
-        title="Welcome to Money"
-        subtitle="A simple wallet platform with no invasion of privacy."
+        title="Welcome to Fortbase"
+        subtitle="A simple platform with no technical skills needed."
       />
 
       <Modal.Input
