@@ -3,12 +3,13 @@ import { createRoot } from "react-dom/client";
 
 import "./main.css";
 
-import TestPage from "./pages/test";
-import DashboardPocPage from "./pages/dashboard_pco";
+// import TestPage from "./pages/test";
+
+import { RouterProvider } from "@tanstack/react-router";
+import { router } from "./router";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {/* <TestPage /> */}
-    <DashboardPocPage />
+    <RouterProvider router={router} />
   </StrictMode>,
 );

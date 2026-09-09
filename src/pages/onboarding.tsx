@@ -178,7 +178,11 @@ const Onboarding = () => {
 
   const Step = steps[step];
 
-  return <Step key={step} onNext={() => setStep((step + 1) % steps.length)} />;
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center p-8">
+      <Step key={step} onNext={() => setStep((step + 1) % steps.length)} />
+    </div>
+  );
 };
 
 export default Onboarding;
