@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "../modals/modal";
+import Modal from "../../modals/modal";
 
 type StepProps = {
   onNext: () => void;

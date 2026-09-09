@@ -6,7 +6,7 @@ import "./main.css";
 // import TestPage from "./pages/test";
 
 import { RouterProvider } from "@tanstack/react-router";
-import { router } from "./router";
+import { router } from "./pages/router";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
